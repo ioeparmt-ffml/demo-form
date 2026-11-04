@@ -143,9 +143,30 @@
                 <p class="form-error">Vui lòng chọn trường này</p>
               </div>
             </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  class="form-textarea"
+                  placeholder="Write your message..."
+                  oninput="onResize(this)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="form-row submit-box">
+              <button class="submit-btn" type="submit">Send Message</button>
+            </div>
           </form>
         </div>
       </div>
     </main>
+    <script>
+      function onResize(e) {
+        e.style.height = "auto";
+        e.style.height = e.scrollHeight + 3px + "px";
+      }
+    </script>
   </body>
 </html>
